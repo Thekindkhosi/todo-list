@@ -14,9 +14,19 @@ const Form = ({ onSubmit }: Props) => {
     formState: { errors },
   } = useForm<TodoFormData>({ resolver: zodResolver(schema) });
 
+  const submitAndReset = () => {
+    handleSubmit(onSubmit);
+    reset();
+  };
+
   return (
     <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form
+        onSubmit={handleSubmit((data) => {
+          onSubmit(data);
+          reset();
+        })}
+      >
         <label htmlFor="title">Title:</label>
         <input {...register("title")} name="title" type="text" />
         {errors.title && <p>{errors.title.message}</p>}
