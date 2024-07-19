@@ -21,22 +21,28 @@ function App() {
 
   return (
     <>
-      <button
-        className="openFormButton"
-        onClick={() => setOpenForm(!isOpenForm)}
-      >
-        {!isOpenForm ? <IoAdd /> : <IoCloseOutline />}
-      </button>
-      {isOpenForm && (
-        <Form
-          onSubmit={(todo) =>
-            setTodoTask([
-              ...todoTask,
-              { ...todo, title: todo.title, time: todo.time },
-            ])
-          }
-        />
-      )}
+      <div>
+        <div className="openFormButtonContainer">
+          <button
+            className="openFormButton"
+            onClick={() => setOpenForm(!isOpenForm)}
+          >
+            {!isOpenForm ? <IoAdd /> : <IoCloseOutline />}
+          </button>
+        </div>
+        {isOpenForm && (
+          <div className="formContainer">
+            <Form
+              onSubmit={(todo) =>
+                setTodoTask([
+                  ...todoTask,
+                  { ...todo, title: todo.title, time: todo.time },
+                ])
+              }
+            />
+          </div>
+        )}
+      </div>
 
       <ul>
         {todoTask.map((todo, index) => (
