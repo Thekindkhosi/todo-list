@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import "./App.scss";
 import Form from "./components/Form";
 import { IoAdd, IoCloseOutline } from "react-icons/io5";
 import { z } from "zod";
@@ -21,7 +21,10 @@ function App() {
 
   return (
     <>
-      <button onClick={() => setOpenForm(!isOpenForm)}>
+      <button
+        className="openFormButton"
+        onClick={() => setOpenForm(!isOpenForm)}
+      >
         {!isOpenForm ? <IoAdd /> : <IoCloseOutline />}
       </button>
       {isOpenForm && (
