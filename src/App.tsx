@@ -3,6 +3,7 @@ import "./App.scss";
 import Form from "./components/Form";
 import { IoAdd, IoCloseOutline } from "react-icons/io5";
 import { z } from "zod";
+import TaskCard from "./components/TaskCard";
 
 export const schema = z.object({
   title: z
@@ -26,6 +27,7 @@ function App() {
           <button
             className="openFormButton"
             onClick={() => setOpenForm(!isOpenForm)}
+            onBlur={() => setOpenForm(false)}
           >
             {!isOpenForm ? <IoAdd /> : <IoCloseOutline />}
           </button>
@@ -43,12 +45,7 @@ function App() {
           </div>
         )}
       </div>
-
-      <ul>
-        {todoTask.map((todo, index) => (
-          <li key={index}>{todo.title}</li>
-        ))}
-      </ul>
+      <TaskCard todoTask={todoTask} />
     </>
   );
 }
