@@ -1,37 +1,38 @@
-.openFormButtonContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .openFormButton {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+div {
+  .openFormButtonContainer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      // background-color: rgb(216, 252, 162);
-      cursor: pointer;
-    }
-    &:active {
-      transform: scale(0.9);
+    .openFormButton {
+      width: 50px;
+      height: 50px;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        cursor: pointer;
+      }
+      &:active {
+        transform: scale(0.9);
+      }
     }
   }
-}
-
-.formContainer {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  height: fit-content;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  display: flex;
+  .formContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: fit-content;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+  }
 }
