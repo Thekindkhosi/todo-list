@@ -1,6 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { schema, TodoFormData } from "../App";
+import "./Form.scss";
 
 interface Props {
   onSubmit: (data: TodoFormData) => void;
@@ -17,6 +18,7 @@ const Form = ({ onSubmit }: Props) => {
   return (
     <div>
       <form
+        className="form"
         onSubmit={handleSubmit((data) => {
           onSubmit(data);
           reset();
