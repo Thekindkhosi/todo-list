@@ -23,13 +23,14 @@ div {
     }
   }
   .formContainer {
+    backdrop-filter: blur(1.5rem);
+    background-color: rgba(216, 216, 216, 0.082);
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
     height: fit-content;
-    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;

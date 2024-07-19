@@ -1,4 +1,5 @@
 .form {
+  background: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,6 +29,9 @@
     &:hover {
       border-color: #007bff;
     }
+  }
+  p {
+    color: red;
   }
   button {
     padding: 10px 20px;
