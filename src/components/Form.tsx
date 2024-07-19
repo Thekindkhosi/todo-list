@@ -14,11 +14,6 @@ const Form = ({ onSubmit }: Props) => {
     formState: { errors },
   } = useForm<TodoFormData>({ resolver: zodResolver(schema) });
 
-  const submitAndReset = () => {
-    handleSubmit(onSubmit);
-    reset();
-  };
-
   return (
     <div>
       <form
